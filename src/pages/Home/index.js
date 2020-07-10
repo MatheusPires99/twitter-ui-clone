@@ -1,22 +1,51 @@
 import React from 'react';
-import { Button } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 
 import Header from '../../components/Header';
 
-import { Container } from './styles';
+import {
+  Container,
+  TweetsContainer,
+  Tweet,
+  UserAvatar,
+  TweetContent,
+  UserInfo,
+  UserName,
+  UserTwitterName,
+  TweetTime,
+  TweetText,
+  TweetImage,
+} from './styles';
 
 const Home = () => {
-  const navigation = useNavigation();
-
   return (
     <Container>
       <Header />
 
-      <Button
-        onPress={() => navigation.navigate('Profile')}
-        title="Ir para Profile"
-      />
+      <TweetsContainer>
+        <Tweet>
+          <UserAvatar
+            source={{
+              uri: 'https://api.adorable.io/avatars/64/abott@adorable.png',
+            }}
+          />
+
+          <TweetContent>
+            <UserInfo>
+              <UserName>Matheus Pires</UserName>
+              <UserTwitterName>@Matheus__Pires</UserTwitterName>
+              <TweetTime>4min</TweetTime>
+            </UserInfo>
+
+            <TweetText>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+              animi repellat minus quae adipisci consequuntur odit officia
+              eligendi exercitationem quia voluptas
+            </TweetText>
+
+            <TweetImage />
+          </TweetContent>
+        </Tweet>
+      </TweetsContainer>
     </Container>
   );
 };

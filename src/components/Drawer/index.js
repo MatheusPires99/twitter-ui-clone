@@ -17,9 +17,10 @@ import {
   NavMenu,
   NavMenuButton,
   NavMenuButtonText,
+  HelpSection,
+  HelpSectionContent,
+  HelpSectionText,
   Footer,
-  FooterContent,
-  FooterText,
 } from './styles';
 
 const Drawer = ({ navigation }) => {
@@ -87,13 +88,18 @@ const Drawer = ({ navigation }) => {
           </NavMenuButton>
         </NavMenu>
 
-        <Footer>
-          <FooterContent>
-            <FooterText>Configurações e privacidade</FooterText>
-            <FooterText>Central de Ajuda</FooterText>
-          </FooterContent>
-        </Footer>
+        <HelpSection>
+          <HelpSectionContent>
+            <HelpSectionText>Configurações e privacidade</HelpSectionText>
+            <HelpSectionText>Central de Ajuda</HelpSectionText>
+          </HelpSectionContent>
+        </HelpSection>
       </ScrollView>
+
+      <Footer>
+        <Icon name="lightbulb" color="#1DA1F2" size={22} />
+        <Icon name="qrcode" color="#1DA1F2" size={22} />
+      </Footer>
     </Container>
   );
 };

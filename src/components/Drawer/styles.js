@@ -1,11 +1,15 @@
 import styled from 'styled-components/native';
 import { RectButton } from 'react-native-gesture-handler';
-import { getStatusBarHeight } from 'react-native-iphone-x-helper';
+import {
+  getStatusBarHeight,
+  getBottomSpace,
+} from 'react-native-iphone-x-helper';
 
 export const Container = styled.View`
   flex: 1;
-  padding-top: ${getStatusBarHeight() + 24}px;
 
+  position: relative;
+  padding-top: ${getStatusBarHeight() + 16}px;
   border-right-width: 0.5px;
   border-style: solid;
   border-color: #38444d;
@@ -75,7 +79,7 @@ export const NavMenuButtonText = styled.Text`
   color: #fff;
 `;
 
-export const Footer = styled.View`
+export const HelpSection = styled.View`
   padding-top: 32px;
 
   border-top-width: 1px;
@@ -83,12 +87,22 @@ export const Footer = styled.View`
   border-color: #38444d;
 `;
 
-export const FooterContent = styled.View`
+export const HelpSectionContent = styled.View`
   padding: 0 24px 24px;
 `;
 
-export const FooterText = styled.Text`
+export const HelpSectionText = styled.Text`
   color: #fff;
   font-size: 18px;
   margin-bottom: 32px;
+`;
+
+export const Footer = styled.View`
+  padding: 0 24px;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+
+  position: absolute;
+  bottom: ${getBottomSpace() + 16}px;
 `;
