@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import { StyleSheet } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
 import {
   getStatusBarHeight,
@@ -10,7 +11,7 @@ export const Container = styled.View`
 
   position: relative;
   padding-top: ${getStatusBarHeight() + 16}px;
-  border-right-width: 0.5px;
+  border-right-width: ${StyleSheet.hairlineWidth}px;
   border-style: solid;
   border-color: #38444d;
 `;

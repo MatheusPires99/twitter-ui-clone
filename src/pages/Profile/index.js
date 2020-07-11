@@ -9,7 +9,9 @@ const Profile = () => {
 
   return (
     <Container>
-      <Text>Profile</Text>
+      <Text style={{ color: '#fff', fontSize: 24, marginBottom: 16 }}>
+        Profile
+      </Text>
       <Button
         onPress={() => navigation.navigate('Home')}
         title="Ir para Home"
